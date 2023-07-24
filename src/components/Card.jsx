@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react";
 import '../styles/Card.css'
 
-function Card({setGameState, pokemon, setBestScore, setScore, score, bestScore, reset}){
-    const[selected, setSelected] = useState(false)
+function Card({ pokemon, setBestScore, setScore, score, bestScore}){
+    const[selected, setSelected] = useState(false);
     const[src, setSrc] = useState(null);
     const[name, setName] = useState(null);
     useEffect(() => {
         pokemon.src.then( data => setSrc(data));
         pokemon.name.then( data => setName(data));
     }, [pokemon.src, pokemon.name])
-        
+    
+    useEffect(()=>{
+        if(score == 0){
+
+            setSelected(false);
+
+        }
+    }, [score]);
     function select(){
         if(selected){
-        setGameState(true);
         setScore(0);
         }
         else{
@@ -23,6 +29,7 @@ function Card({setGameState, pokemon, setBestScore, setScore, score, bestScore, 
             }
         }
     }
+
 
         return (
             <div className ="card"
