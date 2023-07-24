@@ -12,18 +12,28 @@ ul{
 }
 
 main{
-  height: calc( 100vh - 32px - 64px - 15vh - 3rem);
+  height: calc( 100vh - 32px - 64px - 2.5rem);
   display: flex;
   align-items: center;
 }
 
 nav{
-  height: calc(64px + 15vh + 3rem);
+  height: calc(64px + 2.5rem);
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 footer{
   height: 32px;
 }
-.logo{
-  height: 15vh;
-  width: auto;
+
+.title{
+  padding-left: 2rem;
+}
+.scoreBoard{
+ padding-right: 2rem;
+}
+.instructions{
+  padding-top: 1.5rem;
 }

@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import Card from './components/Card'
 import './App.css'
-import logo from './assests/pokemon.png'
 
 function App() {
   const[cards, setCards] = useState(null);
@@ -80,10 +79,14 @@ function App() {
   return (
     <>
     <nav>
-      <img className='logo' src={logo} alt="Pokemon logo" />
-      <h1>Memory Card</h1>
-      <p>Best Score: {bestScore} </p>
-      <p>Score: {score}</p>
+      <div className='title'>
+        <h1>Pokemon Memory Card</h1>
+        <p className='instructions'>{`Get points by clicking on an image but don't click on any more than once!`}</p>
+      </div>
+      <div className='scoreBoard'>
+        <p>Best Score: {bestScore} </p>
+        <p>Score: {score}</p>
+      </div>
     </nav>
     <main>
       <ul id='cards'>{cards}</ul>
@@ -95,5 +98,4 @@ function App() {
   );
 
 }
-//{gameState && <div> YOU LOSE!!!</div>}
 export default App
