@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import Card from './components/Card'
 import './App.css'
-
+import pokeball from './assests/pokeball.png'
 
 function App() {
   const[cards, setCards] = useState(null);
@@ -80,6 +80,7 @@ function App() {
   return (
     <>
     <nav>
+      <img className='pokeball' src={pokeball} alt="pokeball" />
       <h1>Memory Card</h1>
       <p>Best Score: {bestScore} </p>
       <p>Score: {score}</p>

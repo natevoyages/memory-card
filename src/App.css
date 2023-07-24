@@ -12,14 +12,19 @@ ul{
 }
 
 main{
-  height: calc( 100vh - 32px - 64px);
+  height: calc( 100vh - 32px - 64px - 15vh - 3rem);
   display: flex;
   align-items: center;
 }
 
 nav{
-  height: 64px;
+  height: calc(64px + 15vh + 3rem);
 }
 footer{
   height: 32px;
+}
+.pokeball{
+  height: 15vh;
+  width: auto;
+
 }
