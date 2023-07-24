@@ -34,7 +34,7 @@ function Card({ pokemon, setBestScore, setScore, score, bestScore}){
         return (
             <div className ="card"
             onClick={select}>
-                <img src={src} alt="pokemon" border = '1px solid black' />
+                <img src={src} alt="pokemon" />
                 <p>{name}</p>
             </div>);
 }

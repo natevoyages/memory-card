@@ -6,5 +6,10 @@ li{
 img{
     max-width: calc((90vw/6) - 2px);
     height: auto;
+}
+
+.card{
+    border: solid white 1px;
     border-radius: 8px;
+    margin-bottom: 2rem;
 }
